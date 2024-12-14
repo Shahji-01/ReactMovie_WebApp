@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
 import { asyncloadpeople, removepeople } from "../store/actions/peopleAction";
 import { Link } from "react-router-dom";
-import Loader from "../components/Loader";
+import Loader from "./Loader";
 import HorizontalCards from "../templates/HorizontalCards";
 import Dropdown from "../templates/Dropdown";
 
