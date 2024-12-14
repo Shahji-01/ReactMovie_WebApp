@@ -5,7 +5,7 @@ import { asyncloadmoive, removemovie } from "../store/actions/movieAction";
 import { Link } from "react-router-dom";
 import Loader from "./Loader";
 import HorizontalCards from "../templates/HorizontalCards";
-
+import no_image from "../../public/no_image.jpg";
 const MovieDetails = () => {
   const { pathname } = useLocation();
   const navigate = useNavigate();
@@ -56,9 +56,13 @@ const MovieDetails = () => {
       <div className="w-full flex mx-[1%]">
         <img
           className="shadow-[8px_17px_38px_2px_rgba(0,0,0,.5)] h-[60vh] w-[50vh] object-cover rounded-md"
-          src={`https://image.tmdb.org/t/p/original/${
+          src={
             info.detail.backdrop_path || info.detail.poster_path
-          })`}
+              ? `https://image.tmdb.org/t/p/original/${
+                  info.detail.backdrop_path || info.detail.poster_path
+                })`
+              : no_image
+          }
         ></img>
 
         <div className="content ml-[5%] text-5xl font-black text-zinc-100">
@@ -111,8 +115,9 @@ const MovieDetails = () => {
         {info.watchProvider && info.watchProvider.flatrate && (
           <div className="flex text-lg text-zinc-300 mb-4 items-center gap-10">
             <h1>Available on Platform:</h1>
-            {info.watchProvider.flatrate.map((w,i) => (
-              <img key={i}
+            {info.watchProvider.flatrate.map((w, i) => (
+              <img
+                key={i}
                 title={w.provider_name}
                 src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
                 className="w-[6vh] h-[6vh] rounded-lg"
@@ -124,8 +129,9 @@ const MovieDetails = () => {
         {info.watchProvider && info.watchProvider.rent && (
           <div className="flex text-lg text-zinc-300 items-center gap-10 mb-7">
             <h1>Available on rent:</h1>
-            {info.watchProvider.rent.map((w,i) => (
-              <img key={i}
+            {info.watchProvider.rent.map((w, i) => (
+              <img
+                key={i}
                 title={w.provider_name}
                 src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
                 className="w-[6vh] h-[6vh] rounded-lg"
@@ -137,8 +143,9 @@ const MovieDetails = () => {
         {info.watchProvider && info.watchProvider.buy && (
           <div className="flex text-lg text-zinc-300 items-center gap-10">
             <h1>Available on buy:</h1>
-            {info.watchProvider.buy.map((w,i) => (
-              <img key={i}
+            {info.watchProvider.buy.map((w, i) => (
+              <img
+                key={i}
                 title={w.provider_name}
                 src={`https://image.tmdb.org/t/p/original/${w.logo_path}`}
                 className="w-[6vh] h-[6vh] rounded-lg"
