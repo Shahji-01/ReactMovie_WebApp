@@ -28,7 +28,7 @@ const TvDetails = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="w-full h-[220vh] px-[4%]"
+      className="w-full h-[230vh] px-[4%]"
     >
       <nav className="w-full h-[10vh] text-2xl text-zinc-300 gap-10 flex items-center">
         <Link

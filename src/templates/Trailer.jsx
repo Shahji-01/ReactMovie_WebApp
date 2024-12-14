@@ -12,7 +12,7 @@ const Trailer = () => {
  const ytvideo= useSelector((state)=>state[category].info.videos);
 
   return(
-    <div className="absolute top-0 left-0 w-full h-screen flex items-center justify-center bg-[rgba(0,0,0,0.9)]">
+    <div className="absolute top-0 left-0 w-full h-[110vh] flex items-center justify-center bg-[rgba(0,0,0,0.9)]">
        <Link
           onClick={() => navigate(-1)}
           className="absolute ri-close-fill hover:text-[#6556CD] top-[5%] right-[5%] text-white text-3xl"
@@ -20,7 +20,7 @@ const Trailer = () => {
 
     {
        ytvideo ?
-       <ReactPlayer controls height={600} width={1300} url={`https://www.youtube.com/watch?v=${ytvideo.key}`}>
+       <ReactPlayer className="absolute top-12" controls height={600}  width={1300} url={`https://www.youtube.com/watch?v=${ytvideo.key}`}>
 
        </ReactPlayer>:<NotFound/>
     }

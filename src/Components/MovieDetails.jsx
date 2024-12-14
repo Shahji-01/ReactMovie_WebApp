@@ -28,7 +28,7 @@ const MovieDetails = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
       }}
-      className="w-full h-[160vh] px-[4%]"
+      className="w-full h-[180vh] px-[4%]"
     >
       <nav className="w-full h-[10vh] text-2xl text-zinc-300 gap-10 flex items-center">
         <Link
@@ -159,11 +159,17 @@ const MovieDetails = () => {
       <h1 className="text-3xl my-7 text-white font-bold">
         Recommendations and Similar Stuff
       </h1>
-      <HorizontalCards
-        data={
-          info.recommendations.length > 0 ? info.recommendations : info.similar
-        }
-      />
+      {info.recommendations.length > 0|| info.similar.length>0 ? (
+        <HorizontalCards
+          data={
+            info.recommendations.length > 0
+              ? info.recommendations
+              : info.similar
+          }
+        />
+      ) : (
+        <h1 className="text-center text-2xl mt-10 font-semibold text-zinc-100">Nothing To Show</h1>
+      )}
       <Outlet />
     </div>
   ) : (
