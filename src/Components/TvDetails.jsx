@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Outlet, useLocation, useNavigate, useParams } from "react-router-dom";
 import { asyncloadtv, removetv } from "../store/actions/tvAction";
 import { Link } from "react-router-dom";
-import Loader from "../components/Loader";
+import Loader from "./Loader";
 import HorizontalCards from "../templates/HorizontalCards";
 
 const TvDetails = () => {
@@ -151,20 +151,24 @@ const TvDetails = () => {
       <hr className="my-10 border-none h-[2px] bg-zinc-500"></hr>
       <h1 className="text-3xl my-7 text-white font-bold">Seasons</h1>
       <div className="w-[100%] flex overflow-y-hidden p-5 gap-10">
-        {info.detail.seasons.length>0 ? info.detail.seasons.map((s, i) => (
-          <div className="w-[15%]" key={i}>
-            <img 
-              className="h-[40vh] min-w-[14vw] object-cover rounded-md"
-              src={`https://image.tmdb.org/t/p/original/${
-                s.backdrop_path || s.poster_path
-              })`}
-            ></img>
+        {info.detail.seasons.length > 0 ? (
+          info.detail.seasons.map((s, i) => (
+            <div className="w-[15%]" key={i}>
+              <img
+                className="h-[40vh] min-w-[14vw] object-cover rounded-md"
+                src={`https://image.tmdb.org/t/p/original/${
+                  s.backdrop_path || s.poster_path
+                })`}
+              ></img>
 
-            <h1 className="text-zinc-300 text-xl mt-[1vh]">
-              {s.name}
-            </h1>
-          </div>
-        )):<h1 className="text-3xl mt-5 text-white font-black text-center">Nothing to Show</h1>}
+              <h1 className="text-zinc-300 text-xl mt-[1vh]">{s.name}</h1>
+            </div>
+          ))
+        ) : (
+          <h1 className="text-3xl mt-5 text-white font-black text-center">
+            Nothing to Show
+          </h1>
+        )}
       </div>
 
       <hr className="my-10 border-none h-[2px] bg-zinc-500"></hr>
