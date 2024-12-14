@@ -1,12 +1,12 @@
 import React from "react";
-
+import deadpool from "../../public/Deadpool.png";
 const Contact = () => {
   return (
     <div className="w-screen h-screen overflow-hidden bg-[#0A1526] back flex flex-col items-center">
       <h1>Hi there,</h1>className="font-semibold text-xl"
       <img
         className="w-[60%] my-[1%] mx-[27%] z-10"
-        src="../public/Deadpool.png"
+        src={deadpool}
         alt=""
       />
       <div className="w-[90vh]  bg-[rgba(63,63,70,.9)] text-zinc-100  p-7 h-[90vh] absolute z-10 rounded-md top-10">
