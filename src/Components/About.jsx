@@ -1,13 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import deadpool from "../../public/Deadpool.png";
 const About = () => {
   return (
     <div className="w-screen h-[130vh] bg-[#0A1526] back flex flex-col items-center">
       <h1>Hi there,</h1>
       <img
         className="w-[60%] my-[1%] mx-[27%] z-10"
-        src="../public/Deadpool.png"
-        alt="Deadpool"
+        src={deadpool}
+        alt="Deadpool_image"
       />
       <h2 className="  text-[10vh] text-white font-semibold h-[10%]">
         Let's talk about Chill
