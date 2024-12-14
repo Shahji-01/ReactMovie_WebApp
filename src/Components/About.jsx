@@ -7,7 +7,7 @@ const About = () => {
       <img
         className="w-[60%] my-[1%] mx-[27%] z-10"
         src="../public/Deadpool.png"
-        alt=""
+        alt="Deadpool"
       />
       <h2 className="  text-[10vh] text-white font-semibold h-[10%]">
         Let's talk about Chill
