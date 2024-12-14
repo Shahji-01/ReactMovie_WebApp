@@ -2,13 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "./Dropdown";
 import no_image from "../../public/no_image.jpg";
-import pagenotfound from "../../public/404";
+import pagenotfound from "../../public/404.gif";
 const HorizontalCards = ({ data, fun }) => {
   return (
     <div className="w-full  flex overflow-hidden overflow-x-auto ms-4 rounded-md">
       {data.map((d, i) => (
         <Link
-          to={d.media_type ? `/${d.media_type}/details/${d.id}`:pagenotfound}
+          to={d.media_type ? `/${d.media_type}/details/${d.id}` : pagenotfound}
           key={i}
           className="min-w-[20%] max-w-[20%] bg-zinc-900 rounded-md  max-h-[51vh] mr-5 mb-7 text-white "
         >
