@@ -80,7 +80,7 @@ react-movie-webapp/
     npm run build
 
 
-🗺️ How to Use:
+##🗺️ How to Use:
 
   Browse featured or trending movies on the homepage.
     
@@ -91,7 +91,7 @@ react-movie-webapp/
   Use browser navigation or your own site navigation to move between pages.
 
 
-⚙️ Customization & Next Steps
+##⚙️ Customization & Next Steps
   Here are some ideas to expand your project:
   
   🎥 Pagination / Infinite Scroll
@@ -108,7 +108,7 @@ react-movie-webapp/
 
 
 
-🤝 Contributing
+##🤝 Contributing
   Fork the repository
   
   Create a new feature branch
@@ -118,7 +118,7 @@ react-movie-webapp/
   Open a PR — we 👀 appreciate well-documented and clean code!
 
 
-  🙏 Acknowledgements
+  ##🙏 Acknowledgements
   Movie API: TMDb or other providers
   
   UI components and loaders: e.g., React Spinners, Styled Components, Tailwind CSS
