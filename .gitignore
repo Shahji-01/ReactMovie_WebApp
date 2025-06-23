@@ -1,4 +1,3 @@
-# Logs
 logs
 *.log
 npm-debug.log*
@@ -10,14 +9,23 @@ lerna-debug.log*
 node_modules
 dist
 dist-ssr
-*.local
 
-# Editor directories and files
+*.local
+.env
+.DS_Store
+
 .vscode/*
 !.vscode/extensions.json
 .idea
-.env
-.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+.vscode/*
+!.vscode/extensions.json
+.idea
 *.suo
 *.ntvs*
 *.njsproj
