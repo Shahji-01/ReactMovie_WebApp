@@ -8,7 +8,7 @@ import Dropdown from "../templates/Dropdown";
 import Loader from "./Loader";
 
 function Home() {
-  document.title = "React MoiveApp"; 
+  document.title = "React MoiveApp";
 
   const [wallpaper, setWallpaper] = useState(null);
   const [trending, setTrending] = useState(null);
